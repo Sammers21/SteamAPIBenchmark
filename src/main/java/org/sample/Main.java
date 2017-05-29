@@ -79,8 +79,6 @@ public class Main {
     }//9,223,372,036,854,775,807 i
 
 
-
-
     @Benchmark
     public void range_1_1pow10_6_Long_sequential_prime_for() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, Long.class, "s", false);
@@ -222,7 +220,7 @@ public class Main {
         }
 
 
-        while (N.longValue() <= M.longValue()) {
+        while (N.longValue() <= M.longValue() && N.longValue() > 0) {
             if (type == Long.class)
                 nums.add(N.longValue());
             else
