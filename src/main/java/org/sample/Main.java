@@ -80,7 +80,7 @@ public class Main {
 
 
 
-/*
+
     @Benchmark
     public void range_1_1pow10_6_Long_sequential_prime_for() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, Long.class, "s", false);
@@ -120,7 +120,7 @@ public class Main {
     public void range_1_1pow10_7_BigInt_parallel_prime_stream() {
         input(new String[]{"1", "10000000", "9", "kek.txt"}, BigInteger.class, "p", true);
     }
-
+/*
     @Benchmark
     public void range_1_1pow10_7_Long_sequential_prime_for() {
         input(new String[]{"1", "10000000", "9", "kek.txt"}, Long.class, "s", false);
