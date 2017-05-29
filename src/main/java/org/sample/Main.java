@@ -53,43 +53,78 @@ import static java.lang.Math.sqrt;
 public class Main {
 
     @Benchmark
-    public void range_1_1000000_Long_sequential_prime_for() {
+    public void range_1_1pow10_6_Long_sequential_prime_for() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, Long.class, "s", false);
     }
 
     @Benchmark
-    public void range_1_1000000_Long_sequential_prime_stream() {
+    public void range_1_1pow10_6_Long_sequential_prime_stream() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, Long.class, "s", true);
     }
 
     @Benchmark
-    public void range_1_1000000_Long_parallel_prime_for() {
+    public void range_1_1pow10_6_Long_parallel_prime_for() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, Long.class, "p", false);
     }
 
     @Benchmark
-    public void range_1_1000000_Long_parallel_prime_stream() {
+    public void range_1_1pow10_6_Long_parallel_prime_stream() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, Long.class, "p", true);
     }
 
     @Benchmark
-    public void range_1_1000000_BigInt_sequential_prime_for() {
+    public void range_1_1pow10_6_BigInt_sequential_prime_for() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, BigInteger.class, "s", false);
     }
 
     @Benchmark
-    public void range_1_1000000_BigInt_sequential_prime_stream() {
+    public void range_1_1pow10_6_BigInt_sequential_prime_stream() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, BigInteger.class, "s", true);
     }
 
     @Benchmark
-    public void range_1_1000000_BigInt_parallel_prime_for() {
+    public void range_1_1pow10_6_BigInt_parallel_prime_for() {
         input(new String[]{"1", "1000000", "9", "kek.txt"}, BigInteger.class, "p", false);
     }
 
     @Benchmark
-    public void range_1_1000000_BigInt_parallel_prime_stream() {
-        input(new String[]{"1", "1000000", "9", "kek.txt"}, BigInteger.class, "p", true);
+    public void range_1_1pow10_8_BigInt_parallel_prime_stream() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, BigInteger.class, "p", true);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_Long_sequential_prime_for() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, Long.class, "s", false);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_Long_sequential_prime_stream() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, Long.class, "s", true);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_Long_parallel_prime_for() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, Long.class, "p", false);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_Long_parallel_prime_stream() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, Long.class, "p", true);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_BigInt_sequential_prime_for() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, BigInteger.class, "s", false);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_BigInt_sequential_prime_stream() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, BigInteger.class, "s", true);
+    }
+
+    @Benchmark
+    public void range_1_1pow10_8_BigInt_parallel_prime_for() {
+        input(new String[]{"1", "100000000", "9", "kek.txt"}, BigInteger.class, "p", false);
     }
 
     /**
