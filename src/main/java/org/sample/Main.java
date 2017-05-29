@@ -54,29 +54,29 @@ public class Main {
 
 
     @Benchmark
-    public void range9223372036854775807_9223372036854776007_Long_sequential_prime_for() {
-        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "s", false);
+    public void range9223372036854765807_9223372036854775807_Long_sequential_prime_for() {
+        input("9223372036854765807 9223372036854775807 7 kek.txt".split(" "), Long.class, "s", false);
     }
 
     @Benchmark
-    public void range9223372036854775807_9223372036854776007_Long_sequential_prime_stream() {
-        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "s", true);
+    public void range9223372036854765807_9223372036854775807_Long_sequential_prime_stream() {
+        input("9223372036854765807 9223372036854775807 7 kek.txt".split(" "), Long.class, "s", true);
     }
 
     @Benchmark
-    public void range9223372036854775807_9223372036854776007_Long_parallel_prime_for() {
-        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "p", false);
+    public void range9223372036854765807_9223372036854775807_Long_parallel_prime_for() {
+        input("9223372036854765807 9223372036854775807 7 kek.txt".split(" "), Long.class, "p", false);
     }
 
     @Benchmark
-    public void range9223372036854775807_9223372036854776007_Long_parallel_prime_stream() {
-        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "p", true);
+    public void range9223372036854765807_9223372036854775807_Long_parallel_prime_stream() {
+        input("9223372036854765807 9223372036854775807 7 kek.txt".split(" "), Long.class, "p", true);
     }
 
     @Benchmark
-    public void range9223372036854775807_9223372036854776007_BigInt_sequential_prime_for() {
-        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), BigInteger.class, "s", false);
-    }
+    public void range9223372036854765807_9223372036854775807_BigInt_sequential_prime_for() {
+        input("9223372036854765807 9223372036854775807 7 kek.txt".split(" "), BigInteger.class, "s", false);
+    }//9,223,372,036,854,775,807 i
 
 
     /*
