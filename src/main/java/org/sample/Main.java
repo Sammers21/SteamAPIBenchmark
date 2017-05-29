@@ -33,13 +33,7 @@ package org.sample;
 
 import org.openjdk.jmh.annotations.*;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
 import java.math.BigInteger;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -135,7 +129,7 @@ public class Main {
         }
 
 
-        String s = collect.stream()
+        /*String s = collect.stream()
                 .sequential()
                 .map(Number::toString)
                 .reduce((x, y) -> x + "," + y)
@@ -152,7 +146,7 @@ public class Main {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
-        }
+        }*/
     }
 
     public static Stream<Number> range_with_last_digit(Number N, Number M, Number c, Class<?> type) {
