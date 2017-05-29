@@ -215,7 +215,7 @@ public class Main {
     }
 
     public static Stream<Number> range_with_last_digit(Number N, Number M, Number c, Class<?> type) {
-        ArrayList<Number> nums = new ArrayList<Number>((int) ((M.longValue() - (N.longValue() * -1)) / 10));
+        ArrayList<Number> nums = new ArrayList<Number>((int) ((M.longValue() - (N.longValue())) / 10));
 
         while (N.longValue() % 10 != c.longValue()) {
             N = N.longValue() + 1;
