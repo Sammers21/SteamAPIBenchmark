@@ -47,10 +47,39 @@ import static java.lang.Math.sqrt;
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 1, time = 1, timeUnit = TimeUnit.SECONDS)
-@Measurement(iterations = 2, time = 1, timeUnit = TimeUnit.SECONDS)
-@Fork(2)
+@Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Fork(3)
 public class Main {
+
+
+    @Benchmark
+    public void range9223372036854775807_9223372036854776007_Long_sequential_prime_for() {
+        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "s", false);
+    }
+
+    @Benchmark
+    public void range9223372036854775807_9223372036854776007_Long_sequential_prime_stream() {
+        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "s", true);
+    }
+
+    @Benchmark
+    public void range9223372036854775807_9223372036854776007_Long_parallel_prime_for() {
+        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "p", false);
+    }
+
+    @Benchmark
+    public void range9223372036854775807_9223372036854776007_Long_parallel_prime_stream() {
+        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), Long.class, "p", true);
+    }
+
+    @Benchmark
+    public void range9223372036854775807_9223372036854776007_BigInt_sequential_prime_for() {
+        input("9223372036854775807 9223372036854776007 7 kek.txt".split(" "), BigInteger.class, "s", false);
+    }
+
+
+    /*
 
     @Benchmark
     public void range_1_1pow10_6_Long_sequential_prime_for() {
@@ -126,6 +155,7 @@ public class Main {
     public void range_1_1pow10_7_BigInt_parallel_prime_for() {
         input(new String[]{"1", "10000000", "9", "kek.txt"}, BigInteger.class, "p", false);
     }
+*/
 
     /**
      * Выполняет данное задание
